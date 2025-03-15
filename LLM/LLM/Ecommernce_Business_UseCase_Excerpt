@@ -1,0 +1,15 @@
+Ecommerce Monolith Use Cases
+
+1. Product Catalog Management
+   - Users browse and search for products.
+   - The catalog should be independently scalable due to high traffic.
+
+2. Shopping Cart and Checkout
+   - Users add products to their cart and proceed to checkout.
+   - Cart and checkout operations need to be highly available during peak sales.
+
+3. Order Processing
+   - After checkout, an order is created and processed.
+   - Order processing involves integration with external systems (e.g., payment, inventory).
+
+   

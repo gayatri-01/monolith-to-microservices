@@ -1,0 +1,32 @@
+Clusters:
+
+1) OrderService
+OrderService.java
+OrderController.java
+OrderRepository.java
+PaymentGateway.java
+
+2) ProductService
+ProductService.java
+ProductController.java
+ProductRepository.java
+
+3) CartService
+CartService.java
+CartController.java
+CartRepository.java
+
+
+
+From comments in OrderService & PaymentService
+
+Isolating Payment Processing
+
+The `PaymentGateway` utility is used across multiple services. To reduce coupling, create a `PaymentService` microservice for payment processing."
+
+
+    2. "The business document emphasizes centralized authentication. Extract authentication logic from controllers into a dedicated `AuthService` microservice."
+    3. "The `PaymentGateway` utility is used across multiple services. To reduce coupling, create a `PaymentService` microservice for payment processing."
+
+
+
