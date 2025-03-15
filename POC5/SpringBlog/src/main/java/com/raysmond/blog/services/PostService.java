@@ -28,6 +28,9 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+/**
+ * @author Raysmond
+ */
 @Service
 @Slf4j
 @Transactional
@@ -36,6 +39,7 @@ public class PostService {
     @Autowired
     private PostRepository postRepository;
 
+    @Autowired
     private TagService tagService;
 
     @Autowired
@@ -48,7 +52,7 @@ public class PostService {
     public Post getPost(Long postId) {
         log.debug("Get post " + postId);
 
-        Post post = postRepository.findById(postId).orElse(null);
+        Post post = postRepository.findOne(postId);
 
         if (post == null) {
             throw new NotFoundException("Post with id " + postId + " is not found.");
@@ -64,7 +68,7 @@ public class PostService {
 
         if (post == null) {
             try {
-                post = postRepository.findById(Long.valueOf(permalink)).orElse(null);
+                post = postRepository.findOne(Long.valueOf(permalink));
             } catch (NumberFormatException e) {
                 post = null;
             }
@@ -102,7 +106,7 @@ public class PostService {
     public List<Post> getArchivePosts() {
         log.debug("Get all archive posts from database.");
 
-        Pageable page = PageRequest.of(0, Integer.MAX_VALUE, Sort.Direction.DESC, "createdAt");
+        Pageable page = new PageRequest(0, Integer.MAX_VALUE, Sort.Direction.DESC, "createdAt");
         return postRepository.findAllByPostTypeAndPostStatus(PostType.POST, PostStatus.PUBLISHED, page)
                 .getContent()
                 .stream()
@@ -115,7 +119,10 @@ public class PostService {
 
         List<Tag> tags = new ArrayList<>();
 
-        postRepository.findById(post.getId()).ifPresent(p -> tags.addAll(p.getTags()));
+        // Load the post first. If not, when the post is cached before while the tags not,
+        // then the LAZY loading of post tags will cause an initialization error because
+        // of not hibernate connection session
+        postRepository.findOne(post.getId()).getTags().forEach(tags::add);
         return tags;
     }
 
@@ -135,7 +142,7 @@ public class PostService {
         return postRepository.findAllByPostTypeAndPostStatus(
                 PostType.POST,
                 PostStatus.PUBLISHED,
-                PageRequest.of(page, pageSize, Sort.Direction.DESC, "createdAt"));
+                new PageRequest(page, pageSize, Sort.Direction.DESC, "createdAt"));
     }
 
     public Post createAboutPage() {
@@ -177,8 +184,9 @@ public class PostService {
         return names.toString();
     }
 
+    // cache or not?
     public Page<Post> findPostsByTag(String tagName, int page, int pageSize) {
-        return postRepository.findByTag(tagName, PageRequest.of(page, pageSize, Sort.Direction.DESC, "createdAt"));
+        return postRepository.findByTag(tagName, new PageRequest(page, pageSize, Sort.Direction.DESC, "createdAt"));
     }
 
     public List<Object[]> countPostsByTags() {
@@ -190,11 +198,9 @@ public class PostService {
     @Async
     public void incrementViews(Long postId) {
         synchronized(this) {
-            Post post = postRepository.findById(postId).orElse(null);
-            if (post != null) {
-                post.setViews(post.getViews() + 1);
-                postRepository.save(post);
-            }
+            Post post = postRepository.findOne(postId);
+            post.setViews(post.getViews() + 1);
+            postRepository.save(post);
         }
     }
 }

@@ -1,5 +1,6 @@
 package com.raysmond.blog.parser;
 
+
 import com.github.javaparser.JavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.body.MethodDeclaration;
@@ -19,10 +20,12 @@ public class MethodExtractor {
 
     public static void main(String[] args) throws IOException {
         // Specify the root package (directory) to start traversal
-        String packagePath = "src\\main\\java\\com\\monolith\\poc";// Change as needed
+//        String packagePath = "src\\main\\java\\com\\raysmond\\blog\\repositories";// Change as needed
+//        String packagePath = "src\\main\\java\\com\\raysmond\\blog\\services";// Change as needed
+        String packagePath = "src\\main\\java\\com\\raysmond\\blog\\security";// Change as needed
 
         // Output directory for extracted methods
-        String outputDir = "D:\\Gayatri\\BITS WILP\\Dissertation\\SpringBlog\\extracted_methods\\";
+        String outputDir = "D:\\Gayatri\\BITS WILP\\Dissertation\\SpringBlog2\\extracted_methods\\";
         Files.createDirectories(Paths.get(outputDir));
 
         // Start recursive traversal

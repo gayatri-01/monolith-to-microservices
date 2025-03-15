@@ -23,10 +23,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.validation.Valid;
 import java.security.Principal;
-import java.util.Optional;
 
 import static org.springframework.web.bind.annotation.RequestMethod.*;
 
+/**
+ * @author Raysmond
+ */
 @Controller("adminPostController")
 @RequestMapping("admin/posts")
 public class PostController {
@@ -41,7 +43,7 @@ public class PostController {
 
     @GetMapping("")
     public String index(@RequestParam(defaultValue = "0") int page, Model model) {
-        Page<Post> posts = postRepository.findAll(PageRequest.of(page, PAGE_SIZE, Sort.by(Sort.Direction.DESC, "id")));
+        Page<Post> posts = postRepository.findAll(new PageRequest(page, PAGE_SIZE, Sort.Direction.DESC, "id"));
 
         model.addAttribute("totalPages", posts.getTotalPages());
         model.addAttribute("page", page);
@@ -65,30 +67,23 @@ public class PostController {
 
     @RequestMapping(value = "{postId:[0-9]+}/edit")
     public String editPost(@PathVariable Long postId, Model model) {
-        Optional<Post> postOptional = postRepository.findById(postId);
-        if (postOptional.isPresent()) {
-            Post post = postOptional.get();
-            PostForm postForm = DTOUtil.map(post, PostForm.class);
-            postForm.setPostTags(postService.getTagNames(post.getTags()));
+        Post post = postRepository.findOne(postId);
+        PostForm postForm = DTOUtil.map(post, PostForm.class);
 
-            model.addAttribute("post", post);
-            model.addAttribute("postForm", postForm);
-            model.addAttribute("postFormats", PostFormat.values());
-            model.addAttribute("postTypes", PostType.values());
-            model.addAttribute("postStatus", PostStatus.values());
+        postForm.setPostTags(postService.getTagNames(post.getTags()));
 
-            return "admin/posts/edit";
-        } else {
-            return "redirect:/admin/posts";
-        }
+        model.addAttribute("post", post);
+        model.addAttribute("postForm", postForm);
+        model.addAttribute("postFormats", PostFormat.values());
+        model.addAttribute("postTypes", PostType.values());
+        model.addAttribute("postStatus", PostStatus.values());
+
+        return "admin/posts/edit";
     }
 
     @RequestMapping(value = "{postId:[0-9]+}/delete", method = {DELETE, POST})
     public String deletePost(@PathVariable Long postId) {
-        Optional<Post> postOptional = postRepository.findById(postId);
-        if (postOptional.isPresent()) {
-            postService.deletePost(postOptional.get());
-        }
+        postService.deletePost(postRepository.findOne(postId));
         return "redirect:/admin/posts";
     }
 
@@ -118,15 +113,14 @@ public class PostController {
 
             return "admin/posts_edit";
         } else {
-            Optional<Post> postOptional = postRepository.findById(postId);
-            if (postOptional.isPresent()) {
-                Post post = postOptional.get();
-                DTOUtil.mapTo(postForm, post);
-                post.setTags(postService.parseTagNames(postForm.getPostTags()));
+            Post post = postRepository.findOne(postId);
+            DTOUtil.mapTo(postForm, post);
+            post.setTags(postService.parseTagNames(postForm.getPostTags()));
 
-                postService.updatePost(post);
-            }
+            postService.updatePost(post);
+
             return "redirect:/admin/posts";
         }
     }
+
 }
