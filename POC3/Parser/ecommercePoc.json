@@ -1,0 +1,90 @@
+{
+    "nodes": [
+        {
+            "id": "Order",
+            "type": "resource"
+        },
+        {
+            "id": "User",
+            "type": "resource"
+        },
+        {
+            "id": "ProductRepository",
+            "type": "class"
+        },
+        {
+            "id": "Product",
+            "type": "resource"
+        },
+        {
+            "id": "PaymentRepository",
+            "type": "class"
+        },
+        {
+            "id": "Payment",
+            "type": "resource"
+        },
+        {
+            "id": "PocApplication",
+            "type": "class"
+        },
+        {
+            "id": "UserRepository",
+            "type": "class"
+        },
+        {
+            "id": "OrderRepository",
+            "type": "class"
+        },
+        {
+            "id": "ECommerceService",
+            "type": "class"
+        },
+        {
+            "id": "ECommerceController",
+            "type": "class"
+        }
+    ],
+    "edges": [
+        {
+            "from": "ECommerceService",
+            "to": "PaymentRepository",
+            "type": "calls"
+        },
+        {
+            "from": "ECommerceService",
+            "to": "OrderRepository",
+            "type": "calls"
+        },
+        {
+            "from": "ECommerceService",
+            "to": "UserRepository",
+            "type": "calls"
+        },
+        {
+            "from": "ECommerceService",
+            "to": "ProductRepository",
+            "type": "calls"
+        },
+        {
+            "from": "ProductRepository",
+            "to": "Product",
+            "type": "accesses"
+        },
+        {
+            "from": "PaymentRepository",
+            "to": "Payment",
+            "type": "accesses"
+        },
+        {
+            "from": "OrderRepository",
+            "to": "Order",
+            "type": "accesses"
+        },
+        {
+            "from": "UserRepository",
+            "to": "User",
+            "type": "accesses"
+        }
+    ]
+}

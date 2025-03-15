@@ -1,0 +1,98 @@
+###################### KMeans directly on Dependency/Call Graph #########################
+
+TradePlatformService
+KMeans-Microservice 1:
+Classes: HoldingData, TradeAppJSF, PingServlet2Session2JDBCCollection, PingServlet2Servlet, TradeConfigJSF, TradeBuildDB, PingServlet2Session2CMROne2Many, QuoteDataJSF, TradeDirectContextListener, QuoteData, TradeSLSBRemote, PingServlet2Session2Entity, TradeServletAction, TradeJPAContextListener, PingBean, PingServlet2Jsp, PingJDBCWrite, TradeJDBCContextListener, TradeConfigServlet, PingServlet2ServletRcv, PingServlet2Session, TradeSLSBBean, PingServlet2Session2CMROne2One, PingServlet2TwoPhase, PingJDBCRead, OrdersAlertFilter, DirectSLSBBean, PingServlet2Session2JDBC, OrderData, PingServlet2Session2EntityCollection, OrderDataJSF, TradeDBServices
+Resources: quote, order, holding, accountprofile, account
+
+TradeSummaryService
+KMeans-Microservice 0:
+Classes: MarketSummaryDataBeanWS, MarketSummaryDataBean, PortfolioJSF, FinancialUtils, AccountDataJSF, MarketSummaryJSF
+Resources: None
+
+TradeActionService
+KMeans-Microservice 4:
+Classes: TradeAction
+Resources: None
+
+TradeDataService
+KMeans-Microservice 2:
+Classes: TradeJPADirect, KeySequenceDirect, TradeJDBCDirect, TradeAppServlet, RunStatsDataBean
+Resources: quote, order, holding, accountprofile, account
+
+TradeCoreService
+KMeans-Microservice 3:
+Classes: TradeServices
+Resources: None
+
+TradeDirectService
+KMeans-Microservice 5:
+Classes: TradeJEEDirect
+Resources: quote, order, holding, accountprofile, account
+
+###################### KMeans on Class Node Embeddings by GNN #################
+
+TradeSummaryService
+KMeans-Microservice 1:
+Classes: ['HoldingData', 'PingServlet2Session2JDBCCollection', 'TradeJPAContextListener', 'TradeServices', 'PingServlet2Session2EntityCollection', 'MarketSummaryJSF']
+Resources: None
+
+TradePlatformService
+KMeans-Microservice 0:
+Classes: ['TradeAppJSF', 'PingServlet2Servlet', 'MarketSummaryDataBeanWS', 'MarketSummaryDataBean', 'TradeSLSBRemote', 'PingBean', 'PingServlet2Jsp', 'TradeJDBCContextListener', 'PortfolioJSF', 'PingServlet2Session', 'PingServlet2Session2CMROne2One', 'PingServlet2TwoPhase', 'OrdersAlertFilter', 'TradeJEEDirect', 'PingServlet2Session2JDBC', 'RunStatsDataBean', 'AccountDataJSF']
+Resources: ['holding', 'quote', 'account', 'order', 'accountprofile']
+
+TradeConfigService
+KMeans-Microservice 3:
+Classes: ['TradeConfigJSF', 'PingServlet2Session2CMROne2Many', 'TradeAction', 'TradeDirectContextListener', 'TradeJPADirect', 'PingServlet2Session2Entity', 'TradeServletAction', 'PingJDBCWrite', 'TradeConfigServlet', 'PingServlet2ServletRcv', 'KeySequenceDirect', 'TradeSLSBBean', 'TradeJDBCDirect', 'TradeAppServlet', 'PingJDBCRead', 'FinancialUtils', 'DirectSLSBBean']
+Resources: ['holding', 'quote', 'accountprofile', 'account', 'order']
+
+TradeDBSetupService
+KMeans-Microservice 4:
+Classes: ['TradeBuildDB', 'TradeDBServices']
+Resources: None
+
+QuoteDataService
+KMeans-Microservice 5:
+Classes: ['QuoteDataJSF', 'QuoteData']
+Resources: None
+
+OrderDataService
+KMeans-Microservice 2:
+Classes: ['OrderData', 'OrderDataJSF']
+Resources: None
+
+##################### KMeans on Class Node Embeddings by GNN, with enhanced egdes between classes with common resources ####################
+
+TradeSetupService
+Resource-Based KMeans-Microservice 0:
+Classes: HoldingData, TradeAppJSF, TradeBuildDB, TradeDirectContextListener, TradeJPAContextListener, PingServlet2Jsp
+Resources: None
+
+TradePlatformService
+Resource-Based KMeans-Microservice 2:
+Classes: PingServlet2Session2JDBCCollection, PingServlet2Servlet, MarketSummaryDataBeanWS, PingServlet2Session2CMROne2Many, TradeAction, TradeJPADirect, MarketSummaryDataBean, TradeSLSBRemote, PingServlet2Session2Entity, TradeServletAction, TradeJDBCContextListener, TradeConfigServlet, TradeServices, PortfolioJSF, PingServlet2ServletRcv, KeySequenceDirect, TradeSLSBBean, TradeJDBCDirect, PingServlet2Session2CMROne2One, PingServlet2TwoPhase, TradeAppServlet, TradeJEEDirect, RunStatsDataBean, MarketSummaryJSF
+Resources: order, holding, quote, account, accountprofile
+
+OrderConfigService
+Resource-Based KMeans-Microservice 4:
+Classes: TradeConfigJSF, PingJDBCRead, OrderData, AccountDataJSF, OrderDataJSF
+Resources: None
+
+QuoteDataService
+Resource-Based KMeans-Microservice 5:
+Classes: QuoteDataJSF, QuoteData
+Resources: None
+
+TradeUtilityService
+Resource-Based KMeans-Microservice 3:
+Classes: PingBean, PingServlet2Session, FinancialUtils, DirectSLSBBean, PingServlet2Session2JDBC, PingServlet2Session2EntityCollection
+Resources: None
+
+TradeDBOrderService
+Resource-Based KMeans-Microservice 1:
+Classes: PingJDBCWrite, OrdersAlertFilter, TradeDBServices
+Resources: None
+
+##################### KMeans with Custom Penalty for Resource Considerations ####################
+

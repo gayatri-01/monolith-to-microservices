@@ -1,0 +1,31 @@
+Service Usage Statistics:
+account_creation: 4996 logs
+customer_registration: 4991 logs
+transaction: 1955 logs
+loan: 544 logs
+notification: 547 logs
+
+Service Dependencies:
+account_creation -> customer_registration (Weight: 8089)
+account_creation -> transaction (Weight: 1098)
+customer_registration -> transaction (Weight: 1861)
+account_creation -> loan (Weight: 547)
+customer_registration -> loan (Weight: 891)
+loan -> transaction (Weight: 47)
+transaction -> notification (Weight: 1496)
+transaction -> account_creation (Weight: 893)
+notification -> account_creation (Weight: 711)
+transaction -> customer_registration (Weight: 451)
+notification -> customer_registration (Weight: 442)
+customer_registration -> account_creation (Weight: 5365)
+customer_registration -> notification (Weight: 136)
+loan -> account_creation (Weight: 721)
+loan -> customer_registration (Weight: 450)
+notification -> transaction (Weight: 46)
+account_creation -> notification (Weight: 9)
+notification -> loan (Weight: 38)
+
+Detected Microservice Clusters:
+Cluster 1: ['customer_registration', 'account_creation']
+Cluster 2: ['transaction', 'notification']
+Cluster 3: ['loan']

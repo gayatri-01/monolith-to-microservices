@@ -1,0 +1,707 @@
+{
+    "nodes": [
+        {
+            "id": "HoldingData",
+            "type": "class"
+        },
+        {
+            "id": "PingServletWriter",
+            "type": "class"
+        },
+        {
+            "id": "TradeAppJSF",
+            "type": "class"
+        },
+        {
+            "id": "PingServlet2MDBQueue",
+            "type": "class"
+        },
+        {
+            "id": "PingSession3Object",
+            "type": "class"
+        },
+        {
+            "id": "PingServlet2Session2JDBCCollection",
+            "type": "class"
+        },
+        {
+            "id": "PingServlet2Servlet",
+            "type": "class"
+        },
+        {
+            "id": "TradeConfigJSF",
+            "type": "class"
+        },
+        {
+            "id": "PingServlet2MDBTopic",
+            "type": "class"
+        },
+        {
+            "id": "PingSession2",
+            "type": "class"
+        },
+        {
+            "id": "TradeBuildDB",
+            "type": "class"
+        },
+        {
+            "id": "PingSession3",
+            "type": "class"
+        },
+        {
+            "id": "MarketSummaryDataBeanWS",
+            "type": "class"
+        },
+        {
+            "id": "PingSession1",
+            "type": "class"
+        },
+        {
+            "id": "PingServlet2Session2CMROne2Many",
+            "type": "class"
+        },
+        {
+            "id": "TradeScenarioServlet",
+            "type": "class"
+        },
+        {
+            "id": "TradeAction",
+            "type": "class"
+        },
+        {
+            "id": "QuoteDataJSF",
+            "type": "class"
+        },
+        {
+            "id": "TradeDirectContextListener",
+            "type": "class"
+        },
+        {
+            "id": "TradeJPADirect",
+            "type": "class"
+        },
+        {
+            "id": "QuoteData",
+            "type": "class"
+        },
+        {
+            "id": "DirectSLSBRemote",
+            "type": "class"
+        },
+        {
+            "id": "MarketSummaryDataBean",
+            "type": "class"
+        },
+        {
+            "id": "TradeSLSBRemote",
+            "type": "class"
+        },
+        {
+            "id": "PingServlet2Session2Entity",
+            "type": "class"
+        },
+        {
+            "id": "TradeServletAction",
+            "type": "class"
+        },
+        {
+            "id": "TradeJPAContextListener",
+            "type": "class"
+        },
+        {
+            "id": "PingBean",
+            "type": "class"
+        },
+        {
+            "id": "PingServlet2Jsp",
+            "type": "class"
+        },
+        {
+            "id": "PingJDBCWrite",
+            "type": "class"
+        },
+        {
+            "id": "TradeJDBCContextListener",
+            "type": "class"
+        },
+        {
+            "id": "TradeConfigServlet",
+            "type": "class"
+        },
+        {
+            "id": "TradeServices",
+            "type": "class"
+        },
+        {
+            "id": "PortfolioJSF",
+            "type": "class"
+        },
+        {
+            "id": "PingServlet2ServletRcv",
+            "type": "class"
+        },
+        {
+            "id": "PingServlet",
+            "type": "class"
+        },
+        {
+            "id": "KeySequenceDirect",
+            "type": "class"
+        },
+        {
+            "id": "PingServlet2Session",
+            "type": "class"
+        },
+        {
+            "id": "TradeSLSBBean",
+            "type": "class"
+        },
+        {
+            "id": "TradeJDBCDirect",
+            "type": "class"
+        },
+        {
+            "id": "PingServlet2Session2CMROne2One",
+            "type": "class"
+        },
+        {
+            "id": "PingServlet2TwoPhase",
+            "type": "class"
+        },
+        {
+            "id": "PingServlet2Entity",
+            "type": "class"
+        },
+        {
+            "id": "TradeAppServlet",
+            "type": "class"
+        },
+        {
+            "id": "PingServlet2JNDI",
+            "type": "class"
+        },
+        {
+            "id": "PingJDBCRead",
+            "type": "class"
+        },
+        {
+            "id": "OrdersAlertFilter",
+            "type": "class"
+        },
+        {
+            "id": "DirectSLSBLocal",
+            "type": "class"
+        },
+        {
+            "id": "FinancialUtils",
+            "type": "class"
+        },
+        {
+            "id": "TradeJEEDirect",
+            "type": "class"
+        },
+        {
+            "id": "DirectSLSBBean",
+            "type": "class"
+        },
+        {
+            "id": "ExplicitGC",
+            "type": "class"
+        },
+        {
+            "id": "PingServlet2IncludeRcv",
+            "type": "class"
+        },
+        {
+            "id": "PingServlet2Session2JDBC",
+            "type": "class"
+        },
+        {
+            "id": "RunStatsDataBean",
+            "type": "class"
+        },
+        {
+            "id": "OrderData",
+            "type": "class"
+        },
+        {
+            "id": "PingServlet2Session2EntityCollection",
+            "type": "class"
+        },
+        {
+            "id": "quotePriceComparator",
+            "type": "class"
+        },
+        {
+            "id": "AccountDataJSF",
+            "type": "class"
+        },
+        {
+            "id": "TradeSLSBLocal",
+            "type": "class"
+        },
+        {
+            "id": "MarketSummaryJSF",
+            "type": "class"
+        },
+        {
+            "id": "OrderDataJSF",
+            "type": "class"
+        },
+        {
+            "id": "PingServlet2Include",
+            "type": "class"
+        },
+        {
+            "id": "TradeDBServices",
+            "type": "class"
+        },
+        {
+            "id": "order",
+            "type": "resource"
+        },
+        {
+            "id": "account",
+            "type": "resource"
+        },
+        {
+            "id": "accountprofile",
+            "type": "resource"
+        },
+        {
+            "id": "quote",
+            "type": "resource"
+        },
+        {
+            "id": "holding",
+            "type": "resource"
+        }
+    ],
+    "edges": [
+        {
+            "from": "MarketSummaryDataBean",
+            "to": "MarketSummaryDataBean",
+            "type": "calls"
+        },
+        {
+            "from": "MarketSummaryDataBean",
+            "to": "FinancialUtils",
+            "type": "calls"
+        },
+        {
+            "from": "MarketSummaryDataBeanWS",
+            "to": "MarketSummaryDataBeanWS",
+            "type": "calls"
+        },
+        {
+            "from": "MarketSummaryDataBeanWS",
+            "to": "FinancialUtils",
+            "type": "calls"
+        },
+        {
+            "from": "MarketSummaryDataBeanWS",
+            "to": "MarketSummaryDataBean",
+            "type": "calls"
+        },
+        {
+            "from": "RunStatsDataBean",
+            "to": "RunStatsDataBean",
+            "type": "calls"
+        },
+        {
+            "from": "KeySequenceDirect",
+            "to": "KeySequenceDirect",
+            "type": "calls"
+        },
+        {
+            "from": "TradeJDBCDirect",
+            "to": "TradeJDBCDirect",
+            "type": "calls"
+        },
+        {
+            "from": "TradeJDBCDirect",
+            "to": "KeySequenceDirect",
+            "type": "calls"
+        },
+        {
+            "from": "TradeJDBCDirect",
+            "to": "RunStatsDataBean",
+            "type": "calls"
+        },
+        {
+            "from": "TradeJEEDirect",
+            "to": "TradeJEEDirect",
+            "type": "calls"
+        },
+        {
+            "from": "TradeJEEDirect",
+            "to": "KeySequenceDirect",
+            "type": "calls"
+        },
+        {
+            "from": "TradeJEEDirect",
+            "to": "RunStatsDataBean",
+            "type": "calls"
+        },
+        {
+            "from": "TradeJPADirect",
+            "to": "TradeJPADirect",
+            "type": "calls"
+        },
+        {
+            "from": "TradeJPADirect",
+            "to": "TradeJDBCDirect",
+            "type": "calls"
+        },
+        {
+            "from": "AccountDataJSF",
+            "to": "AccountDataJSF",
+            "type": "calls"
+        },
+        {
+            "from": "AccountDataJSF",
+            "to": "TradeAction",
+            "type": "calls"
+        },
+        {
+            "from": "AccountDataJSF",
+            "to": "FinancialUtils",
+            "type": "calls"
+        },
+        {
+            "from": "MarketSummaryJSF",
+            "to": "MarketSummaryJSF",
+            "type": "calls"
+        },
+        {
+            "from": "MarketSummaryJSF",
+            "to": "TradeAction",
+            "type": "calls"
+        },
+        {
+            "from": "MarketSummaryJSF",
+            "to": "MarketSummaryDataBean",
+            "type": "calls"
+        },
+        {
+            "from": "OrderDataJSF",
+            "to": "OrderDataJSF",
+            "type": "calls"
+        },
+        {
+            "from": "OrderDataJSF",
+            "to": "TradeAction",
+            "type": "calls"
+        },
+        {
+            "from": "OrderDataJSF",
+            "to": "OrderData",
+            "type": "calls"
+        },
+        {
+            "from": "PortfolioJSF",
+            "to": "PortfolioJSF",
+            "type": "calls"
+        },
+        {
+            "from": "PortfolioJSF",
+            "to": "TradeAction",
+            "type": "calls"
+        },
+        {
+            "from": "PortfolioJSF",
+            "to": "HoldingData",
+            "type": "calls"
+        },
+        {
+            "from": "PortfolioJSF",
+            "to": "FinancialUtils",
+            "type": "calls"
+        },
+        {
+            "from": "QuoteData",
+            "to": "FinancialUtils",
+            "type": "calls"
+        },
+        {
+            "from": "QuoteDataJSF",
+            "to": "QuoteDataJSF",
+            "type": "calls"
+        },
+        {
+            "from": "QuoteDataJSF",
+            "to": "TradeAction",
+            "type": "calls"
+        },
+        {
+            "from": "QuoteDataJSF",
+            "to": "QuoteData",
+            "type": "calls"
+        },
+        {
+            "from": "TradeAppJSF",
+            "to": "TradeAction",
+            "type": "calls"
+        },
+        {
+            "from": "TradeAppJSF",
+            "to": "TradeAppJSF",
+            "type": "calls"
+        },
+        {
+            "from": "TradeConfigJSF",
+            "to": "TradeConfigJSF",
+            "type": "calls"
+        },
+        {
+            "from": "TradeConfigJSF",
+            "to": "TradeAction",
+            "type": "calls"
+        },
+        {
+            "from": "DirectSLSBBean",
+            "to": "TradeJEEDirect",
+            "type": "calls"
+        },
+        {
+            "from": "TradeSLSBBean",
+            "to": "TradeJEEDirect",
+            "type": "calls"
+        },
+        {
+            "from": "OrdersAlertFilter",
+            "to": "TradeServices",
+            "type": "calls"
+        },
+        {
+            "from": "PingServlet2Session",
+            "to": "TradeSLSBRemote",
+            "type": "calls"
+        },
+        {
+            "from": "PingServlet2Session2CMROne2Many",
+            "to": "TradeServices",
+            "type": "calls"
+        },
+        {
+            "from": "PingServlet2Session2CMROne2One",
+            "to": "TradeServices",
+            "type": "calls"
+        },
+        {
+            "from": "PingServlet2Session2Entity",
+            "to": "TradeServices",
+            "type": "calls"
+        },
+        {
+            "from": "PingServlet2Session2EntityCollection",
+            "to": "TradeServices",
+            "type": "calls"
+        },
+        {
+            "from": "PingServlet2Session2JDBC",
+            "to": "TradeServices",
+            "type": "calls"
+        },
+        {
+            "from": "PingServlet2Session2JDBCCollection",
+            "to": "TradeServices",
+            "type": "calls"
+        },
+        {
+            "from": "PingServlet2TwoPhase",
+            "to": "TradeSLSBRemote",
+            "type": "calls"
+        },
+        {
+            "from": "PingJDBCRead",
+            "to": "TradeJEEDirect",
+            "type": "calls"
+        },
+        {
+            "from": "PingJDBCWrite",
+            "to": "TradeJEEDirect",
+            "type": "calls"
+        },
+        {
+            "from": "PingServlet2Jsp",
+            "to": "PingBean",
+            "type": "calls"
+        },
+        {
+            "from": "PingServlet2Servlet",
+            "to": "PingBean",
+            "type": "calls"
+        },
+        {
+            "from": "PingServlet2ServletRcv",
+            "to": "PingBean",
+            "type": "calls"
+        },
+        {
+            "from": "TradeAction",
+            "to": "MarketSummaryDataBean",
+            "type": "calls"
+        },
+        {
+            "from": "TradeAction",
+            "to": "TradeAction",
+            "type": "calls"
+        },
+        {
+            "from": "TradeAction",
+            "to": "TradeServices",
+            "type": "calls"
+        },
+        {
+            "from": "TradeAppServlet",
+            "to": "TradeJDBCDirect",
+            "type": "calls"
+        },
+        {
+            "from": "TradeAppServlet",
+            "to": "TradeJPADirect",
+            "type": "calls"
+        },
+        {
+            "from": "TradeAppServlet",
+            "to": "TradeJEEDirect",
+            "type": "calls"
+        },
+        {
+            "from": "TradeBuildDB",
+            "to": "TradeDBServices",
+            "type": "calls"
+        },
+        {
+            "from": "TradeBuildDB",
+            "to": "TradeBuildDB",
+            "type": "calls"
+        },
+        {
+            "from": "TradeBuildDB",
+            "to": "TradeAction",
+            "type": "calls"
+        },
+        {
+            "from": "TradeConfigServlet",
+            "to": "TradeAction",
+            "type": "calls"
+        },
+        {
+            "from": "TradeDirectContextListener",
+            "to": "TradeJEEDirect",
+            "type": "calls"
+        },
+        {
+            "from": "TradeJDBCContextListener",
+            "to": "TradeJDBCDirect",
+            "type": "calls"
+        },
+        {
+            "from": "TradeJPAContextListener",
+            "to": "TradeJPADirect",
+            "type": "calls"
+        },
+        {
+            "from": "TradeServletAction",
+            "to": "TradeServices",
+            "type": "calls"
+        },
+        {
+            "from": "TradeJDBCDirect",
+            "to": "quote",
+            "type": "accesses"
+        },
+        {
+            "from": "TradeJDBCDirect",
+            "to": "account",
+            "type": "accesses"
+        },
+        {
+            "from": "TradeJDBCDirect",
+            "to": "accountprofile",
+            "type": "accesses"
+        },
+        {
+            "from": "TradeJDBCDirect",
+            "to": "holding",
+            "type": "accesses"
+        },
+        {
+            "from": "TradeJEEDirect",
+            "to": "order",
+            "type": "accesses"
+        },
+        {
+            "from": "TradeJEEDirect",
+            "to": "holding",
+            "type": "accesses"
+        },
+        {
+            "from": "TradeJEEDirect",
+            "to": "accountprofile",
+            "type": "accesses"
+        },
+        {
+            "from": "TradeJEEDirect",
+            "to": "account",
+            "type": "accesses"
+        },
+        {
+            "from": "TradeJEEDirect",
+            "to": "quote",
+            "type": "accesses"
+        },
+        {
+            "from": "TradeJPADirect",
+            "to": "account",
+            "type": "accesses"
+        },
+        {
+            "from": "TradeJPADirect",
+            "to": "accountprofile",
+            "type": "accesses"
+        },
+        {
+            "from": "TradeJPADirect",
+            "to": "order",
+            "type": "accesses"
+        },
+        {
+            "from": "TradeJPADirect",
+            "to": "holding",
+            "type": "accesses"
+        },
+        {
+            "from": "TradeJPADirect",
+            "to": "quote",
+            "type": "accesses"
+        },
+        {
+            "from": "TradeSLSBBean",
+            "to": "order",
+            "type": "accesses"
+        },
+        {
+            "from": "TradeSLSBBean",
+            "to": "holding",
+            "type": "accesses"
+        },
+        {
+            "from": "TradeSLSBBean",
+            "to": "account",
+            "type": "accesses"
+        },
+        {
+            "from": "TradeSLSBBean",
+            "to": "accountprofile",
+            "type": "accesses"
+        },
+        {
+            "from": "TradeSLSBBean",
+            "to": "quote",
+            "type": "accesses"
+        }
+    ]
+}

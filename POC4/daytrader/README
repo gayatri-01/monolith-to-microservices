@@ -1,0 +1,63 @@
+-----------------------------------------------------
+| Day Trader Benchmarking Application for OpenShift |
+-----------------------------------------------------
+
+(C) Copyright 2006,2012 The Apache Software Foundation.
+----------------------------------------------------------------------
+
+The code in this directory contains the code for the benchmark sample called
+Day Trader.  This sample was contributed by IBM to the Apache Geronimo project
+under the ASF license to further functional and performance testing of Geronimo.  
+
+-----------
+|  BUILD  |
+-----------
+To build Daytrader, you need to have JDK 6 and Maven 3.0.3 or later
+installed, which can be found at http://maven.apache.org.
+Once installed you can build Daytrader by executing the following command
+from the dayTrader root directory (the directory containing this README):
+
+  $ mvn clean install
+
+
+--------------------------
+|  INSTALL ON OPENSHIFT  |
+--------------------------
+
+You can install the DayTrader application using one of the 'eap64-postgresql-s2i' templates:
+	
+  $ oc new-app eap64-postgresql-s2i \
+	  -p APPLICATION_NAME=daytrader \
+	  -p SOURCE_REPOSITORY_URL=https://github.com/siamaksade/daytrader.git \
+	  -p SOURCE_REPOSITORY_REF=master \
+	  -p CONTEXT_DIR=. \
+	  -p DB_JNDI=java:jboss/datasources/TradeDataSource \
+	  -p DB_DATABASE=daytrader
+	
+
+---------
+|  RUN  |
+---------
+1. Access the dayTrader application at:
+         http://<hostname>:<port>/daytrader (This is for traditional servlet and jsp)
+         http://<hostname>:<port>/daytrader/index.faces(This is for JSF)
+2. Before you begin using Daytrader, theres are a couple setup steps:
+   - Re-create daytrader tables
+   - Populate the database with a set of fictional users, stocks, prices, etc.
+     by selecting:
+         'Configuration -> (Re)-populate Trade Database'.
+     Note: This may take a minute or two depending on your database server.
+   - After populating the database, the Daytrader Configuration options will
+     appear.  Just accept the defaults.
+3. Now you can begin trading by going to:
+         'Trading & Portfolios'   
+
+---------------
+|  UNINSTALL  |
+---------------
+To uninstall Daytrader, issue the following commands:
+
+1. If you installed Daytrader as an application (EAR) using the deployer:
+      deploy.[bat|sh] undeploy org.apache.geronimo.daytrader/daytrader/<version>/car
+
+
