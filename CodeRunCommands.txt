@@ -1,0 +1,55 @@
+Code Run Examples:
+
+______________________________________________________________________________________________
+
+1) POC 1 - Static Analysis - Call Graph with Clustering Algorithm
+
+cd D:\Gayatri\BITS WILP\Dissertation\monolith-to-microservices\POC1\DependencyGraphExtraction_And_Clustering
+
+python clustering_fixed_clusters.py
+
+python clustering_louvain.py
+
+______________________________________________________________________________________________
+
+2) POC 2 - Static Analysis - OpenAPI Embedding Based Clustering
+
+cd D:\Gayatri\BITS WILP\Dissertation\monolith-to-microservices\POC2
+
+python interface_analysis_3.py   => use ecommerce.yaml on line 13
+
+python interface_analysis_3.py => use twritter.yaml on line 13
+______________________________________________________________________________________________
+
+3) POC 3 - Static Analysis - Dependency Graph with AST, Graph Neural Network and Clustering Algorithm
+
+cd D:\Gayatri\BITS WILP\Dissertation\monolith-to-microservices\POC3
+
+python gnn2.py - Ecommerce App
+
+python gnn2.py - DayTrader App
+
+______________________________________________________________________________________________
+
+4) POC 4 - Database Aware Analysis - Dependency Graph considering Data Sources with AST, Graph Neural Network  and Clustering Algorithm
+
+cd D:\Gayatri\BITS WILP\Dissertation\monolith-to-microservices\POC4
+
+python gnn4.py
+______________________________________________________________________________________________
+
+5) POC 5 - Lexical Analysis - Functional Semantics Similarities using Code2Vec and Clustering
+
+cd D:\Gayatri\BITS WILP\Dissertation\monolith-to-microservices\POC5\Code2Vec
+
+python cluster.py
+
+______________________________________________________________________________________________
+
+6) POC 6 - Dynamic Analysis - Web Server Access Logs with Clustering Algorithm
+
+cd D:\Gayatri\BITS WILP\Dissertation\monolith-to-microservices\POC6
+
+python analyze_logs.py
+
+______________________________________________________________________________________________

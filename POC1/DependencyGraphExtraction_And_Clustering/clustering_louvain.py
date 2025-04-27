@@ -5,7 +5,6 @@ import extract_dependencies as ed
 import community.community_louvain as community_louvain
 import networkx as nx
 import numpy as np
-import extract_dependencies as ed
 from sklearn.metrics import silhouette_score
 import community.community_louvain as community_louvain
 
@@ -25,17 +24,17 @@ for class_name, cluster_id in partition.items():
     microservices[cluster_id].append(class_name)
 
 # **Step 3: Display results**
-print("\n🔹 Suggested Microservices:")
+print("\nSuggested Microservices:")
 for service, classes in microservices.items():
-    print(f"  ➤ Microservice {service + 1}: {classes}")
+    print(f"Microservice {service + 1}: {classes}")
 
 # **Step 4: Visualize Clusters**
-# plt.figure(figsize=(10, 7))
-# pos = nx.spring_layout(dependency_graph)
-# colors = [partition[node] for node in dependency_graph.nodes()]
-# nx.draw(dependency_graph, pos, node_color=colors, with_labels=True, cmap=plt.cm.Set3, edge_color="gray")
-# plt.title("Louvain-Based Microservices Clustering")
-# plt.show()
+plt.figure(figsize=(10, 7))
+pos = nx.spring_layout(dependency_graph)
+colors = [partition[node] for node in dependency_graph.nodes()]
+nx.draw(dependency_graph, pos, node_color=colors, with_labels=True, cmap=plt.cm.Set3, edge_color="gray")
+plt.title("Louvain-Based Microservices Clustering")
+plt.show()
 
 
 # **Step 4: Compute Metrics**
@@ -64,13 +63,13 @@ intra_service_edges = sum(
 )
 service_cohesion = intra_service_edges / total_edges if total_edges > 0 else 0
 
-# **Step 5: Print Results**
-print("\n🔹 Suggested Microservices:")
-for service, classes in microservices.items():
-    print(f"  ➤ Microservice {service + 1}: {classes}")
+# # **Step 5: Print Results**
+# print("\n🔹 Suggested Microservices:")
+# for service, classes in microservices.items():
+#     print(f"  ➤ Microservice {service + 1}: {classes}")
 
-print("\n📊 **Clustering Evaluation Metrics**")
-print(f"✅ Modularity Score: {modularity:.4f} (Higher is better)")
-print(f"✅ Silhouette Score: {silhouette:.4f} (Higher is better)")
-print(f"✅ Service Coupling: {service_coupling:.4f} (Lower is better)")
-print(f"✅ Service Cohesion: {service_cohesion:.4f} (Higher is better)")
+print("\n**Clustering Evaluation Metrics**")
+print(f"Modularity Score: {modularity:.4f} (Higher is better)")
+print(f"Silhouette Score: {silhouette:.4f} (Higher is better)")
+print(f"Service Coupling: {service_coupling:.4f} (Lower is better)")
+print(f"Service Cohesion: {service_cohesion:.4f} (Higher is better)")
